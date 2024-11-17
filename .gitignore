@@ -1,0 +1,6 @@
+project_sem
+.streamlit
+__pycache__
+*.com
+.venv
+output.png
