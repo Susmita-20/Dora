@@ -21,6 +21,10 @@ from llama_index.core import PromptTemplate
 
 
 st.set_page_config(page_title="DORA", page_icon="🦙")
+st.markdown(f"""<style>
+        .st-emotion-cache-79elbk{{
+            display: none;}}
+            </style>""", unsafe_allow_html=True)
 menu()
 
 

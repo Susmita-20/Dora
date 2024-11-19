@@ -1,6 +1,8 @@
 import streamlit as st
 
 
+
+
 def authmenu():
     st.sidebar.page_link("./pages/project.py",label="Projects")
     st.sidebar.page_link("./pages/query.py",label="Query")

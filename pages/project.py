@@ -23,6 +23,10 @@ firebaseConfig = {
 firebase = pyrebase.initialize_app(firebaseConfig)
 
 st.set_page_config(page_title="DORA", page_icon="🦙")
+st.markdown(f"""<style>
+        .st-emotion-cache-79elbk{{
+            display: none;}}
+            </style>""", unsafe_allow_html=True)
 menu()
 
 if "role" not in st.session_state or st.session_state.role is None:

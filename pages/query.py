@@ -5,6 +5,10 @@ from llama_index.core import SimpleDirectoryReader, VectorStoreIndex, SummaryInd
 from llama_index.core.memory import ChatMemoryBuffer
 
 st.set_page_config(page_title="DORA", page_icon="🦙")
+st.markdown(f"""<style>
+        .st-emotion-cache-79elbk{{
+            display: none;}}
+            </style>""", unsafe_allow_html=True)
 menu()
 
 if "messages" not in st.session_state:

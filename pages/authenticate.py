@@ -8,6 +8,10 @@ if "role" not in st.session_state:
 
 
 st.set_page_config(page_title="DORA", page_icon="🦙")
+st.markdown(f"""<style>
+        .st-emotion-cache-79elbk{{
+            display: none;}}
+            </style>""", unsafe_allow_html=True)
 menu()
 
 if "projects" not in st.session_state:
