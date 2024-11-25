@@ -18,7 +18,7 @@ if __name__ == "__main__":
      crossorigin="anonymous"></script>
     """,unsafe_allow_html=True)
 
-    print("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7367141985992219")
+    # print("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7367141985992219")
 
 
     # Page Title and Description
