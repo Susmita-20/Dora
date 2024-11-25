@@ -1,5 +1,6 @@
 import streamlit as st
 import os
+import re
 
 from menu import menu
 # projects
@@ -12,13 +13,19 @@ if __name__ == "__main__":
         .st-emotion-cache-79elbk{{
             display: none;}}
             </style>""", unsafe_allow_html=True)
-    st.markdown(f"""
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7367141985992219"
-     crossorigin="anonymous"></script>
-    """,unsafe_allow_html=True)
+
+    code = """<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7367141985992219"></script>"""
+
+a = os.path.dirname(st.__file__)+'/static/index.html'
+with open(a, 'r') as f:
+    data = f.read()
+    if len(re.findall('UA-', data)) == 0:
+        with open(a, 'w') as ff:
+            newdata = re.sub('<head>', '<head>'+code, data)
+            ff.write(newdata)
 
     # print("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7367141985992219")
-
 
     # Page Title and Description
     st.title("Welcome to DORAv2.0 (BETA)!")
@@ -73,6 +80,5 @@ if __name__ == "__main__":
     ---
     Experience the future of document interaction with DORA. Simplify, streamline, and succeed.
     """)
-
 
     menu()
