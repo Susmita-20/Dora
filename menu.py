@@ -1,10 +1,7 @@
 import streamlit as st
 import streamlit.components.v1 as components
 
-HtmlFile = open('test.html', 'r', encoding='utf-8')
-source_code = HtmlFile.read()
-print(source_code)
-components.html(source_code, height=600)
+
 
 def authmenu():
     st.sidebar.page_link("./pages/project.py",label="Projects")
@@ -20,6 +17,10 @@ def unauthmenu():
 
 
 def menu():
+    HtmlFile = open('test.html', 'r', encoding='utf-8')
+    source_code = HtmlFile.read()
+    print(source_code)
+    components.html(source_code, height=600)
 
     if "role" not in st.session_state or st.session_state.role is None:
         unauthmenu()
