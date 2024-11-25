@@ -14,7 +14,10 @@ if __name__ == "__main__":
             display: none;}}
             </style>""", unsafe_allow_html=True)
 
-
+    HtmlFile = open('test.html', 'r', encoding='utf-8')
+    source_code = HtmlFile.read()
+    print(source_code)
+    st.html(source_code, height=600)
 
     # print("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7367141985992219")
 
