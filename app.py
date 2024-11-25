@@ -14,8 +14,7 @@ if __name__ == "__main__":
             display: none;}}
             </style>""", unsafe_allow_html=True)
 
-    code = """<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7367141985992219"></script>"""
+    code = """<meta name="google-adsense-account" content="ca-pub-7367141985992219">"""
 
 a = os.path.dirname(st.__file__)+'/static/index.html'
 with open(a, 'r') as f:
