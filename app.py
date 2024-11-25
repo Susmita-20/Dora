@@ -14,15 +14,7 @@ if __name__ == "__main__":
             display: none;}}
             </style>""", unsafe_allow_html=True)
 
-    code = """<meta name="google-adsense-account" content="ca-pub-7367141985992219">"""
 
-a = os.path.dirname(st.__file__)+'/static/index.html'
-with open(a, 'r') as f:
-    data = f.read()
-    if len(re.findall('UA-', data)) == 0:
-        with open(a, 'w') as ff:
-            newdata = re.sub('<head>', '<head>'+code, data)
-            ff.write(newdata)
 
     # print("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7367141985992219")
 
