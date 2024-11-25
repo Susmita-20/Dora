@@ -13,8 +13,7 @@ if __name__ == "__main__":
             display: none;}}
             </style>""", unsafe_allow_html=True)
     st.markdown(f"""
-    <script async src="<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7367141985992219"
-     crossorigin="anonymous"></script>"
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7367141985992219"
      crossorigin="anonymous"></script>
     """,unsafe_allow_html=True)
 
