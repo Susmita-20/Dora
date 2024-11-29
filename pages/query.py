@@ -18,7 +18,7 @@ for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
 
-gen_prompt = "Leverage your chatbot abilities to answer some given questions on a specific topic by only using the context provided, not using any prior knowledge, making sure to avoid repetitions in the informations and write the answers in such a way that all the answers must follow the flow and together can be used to form a report."
+gen_prompt = "Leverage your chatbot abilities to answer in detail some given questions on a specific topic by only using the context provided, not using any prior knowledge, making sure to avoid repetitions in the informations and write the answers in such a way that all the answers must follow the flow and together can be used to form a report."
 
 try: 
     projects_names = os.listdir(f"{st.session_state.role}/index")
